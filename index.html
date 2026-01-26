@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartesian Ghost</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Garamond', 'Georgia', serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            color: #c0c0c0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(60, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 0, 40, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: 0.5rem;
+            margin-bottom: 1rem;
+            color: #e8e8e8;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(200, 200, 200, 0.3);
+            font-family: 'Didot', 'Garamond', serif;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 0.3rem;
+            margin-bottom: 3rem;
+            color: #808080;
+            font-weight: 300;
+            text-transform: lowercase;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #606060, transparent);
+            margin: 2rem auto;
+        }
+
+        .content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin: 2rem 0;
+            color: #a0a0a0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 3rem 0;
+            padding: 2rem;
+            border-left: 2px solid #404040;
+            color: #b0b0b0;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 4rem;
+            color: #303030;
+            font-family: serif;
+        }
+
+        .symbols {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            font-size: 2rem;
+            color: #505050;
+        }
+
+        .symbol {
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .symbol:hover {
+            color: #808080;
+            text-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+        }
+
+        footer {
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #505050;
+            letter-spacing: 0.2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+                letter-spacing: 0.3rem;
+            }
+            
+            .container {
+                padding: 2rem;
+            }
+
+            .quote {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Cartesian Ghost</h1>
+        <div class="subtitle">where reason meets the void</div>
+        
+        <div class="divider"></div>
+        
+        <div class="content">
+            <p>In the interstices of logic and oblivion, we forge our sound.</p>
+        </div>
+
+        <div class="quote">
+            I think, therefore I haunt
+        </div>
+
+        <div class="symbols">
+            <span class="symbol">◊</span>
+            <span class="symbol">✧</span>
+            <span class="symbol">◊</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <footer>
+            MMXXVI
+        </footer>
+    </div>
+</body>
+</html>
