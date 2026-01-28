@@ -442,11 +442,16 @@ header.scrolled {
     filter: drop-shadow(0 0 10px var(--accent-color));
 }
 
-.tracklist-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 20px;
+/* Tracklist & Singles Styling */
+.tracklist-preview {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.singles-list {
+    margin-top: 30px;
+    text-align: left;
+    /* Match description alignment */
 }
 
 .tracklist-preview h4,
@@ -814,7 +819,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    .tracklist-container,
+    .tracklist-preview,
     .singles-list {
         display: none;
     }
