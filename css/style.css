@@ -628,6 +628,10 @@ footer {
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
+    .mobile-only {
+        display: block;
+    }
+
     .section {
         padding: 60px 0;
     }
@@ -733,8 +737,13 @@ footer {
     }
 
     /* Hero */
-    .main-title {
-        font-size: 2.5rem;
+    .hero-content .mobile-only {
+        margin-top: 20px;
+    }
+
+    .hero-content .btn {
+        width: 250px;
+        box-sizing: border-box;
     }
 
     /* Bio */
