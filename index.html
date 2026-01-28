@@ -1,189 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartesian Ghost</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Garamond, Georgia, serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
-            color: #c0c0c0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(60, 0, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 0, 40, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 900px;
-            padding: 3rem;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 5rem;
-            font-weight: 300;
-            letter-spacing: 0.5rem;
-            margin-bottom: 1rem;
-            color: #e8e8e8;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(200, 200, 200, 0.3);
-            font-family: Didot, Garamond, serif;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            letter-spacing: 0.3rem;
-            margin-bottom: 3rem;
-            color: #808080;
-            font-weight: 300;
-            text-transform: lowercase;
-            font-style: italic;
-        }
-
-        .divider {
-            width: 200px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #606060, transparent);
-            margin: 2rem auto;
-        }
-
-        .content {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            margin: 2rem 0;
-            color: #a0a0a0;
-        }
-
-        .quote {
-            font-style: italic;
-            font-size: 1.3rem;
-            margin: 3rem 0;
-            padding: 2rem;
-            border-left: 2px solid #404040;
-            color: #b0b0b0;
-            position: relative;
-        }
-
-        .quote::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-size: 4rem;
-            color: #303030;
-            font-family: serif;
-        }
-
-        .symbols {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin: 3rem 0;
-            font-size: 2rem;
-            color: #505050;
-        }
-
-        .symbol {
-            transition: all 0.3s ease;
-            cursor: default;
-        }
-
-        .symbol:hover {
-            color: #808080;
-            text-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
-        }
-
-        footer {
-            margin-top: 4rem;
-            font-size: 0.9rem;
-            color: #505050;
-            letter-spacing: 0.2rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
-                letter-spacing: 0.3rem;
-            }
-            
-            .container {
-                padding: 2rem;
-            }
-
-            .quote {
-                font-size: 1.1rem;
-                padding: 1.5rem;
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 2s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>Cartesian Ghost | Arcane Metal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Official website of Cartesian Ghost, an Arcane Metal band from Mallorca, Spain. Listen to Lux Arcana now.">
 </head>
+
 <body>
-    <div class="container fade-in">
-        <h1>Cartesian Ghost</h1>
-        <div class="subtitle">where reason meets the void</div>
-        
-        <div class="divider"></div>
-        
-        <div class="content">
-            <p>In the interstices of logic and oblivion, we forge our sound.</p>
+
+    <header id="header">
+        <div class="container header-content">
+            <a href="#hero" class="logo">
+                <img src="assets/images/logo_symbol_grunge.png" alt="Cartesian Ghost" class="logo-img">
+            </a>
+            <nav id="nav">
+                <div class="nav-container-inline">
+                    <ul class="nav-links">
+                        <li><a href="#bio">Bio</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#shows">Shows</a></li>
+                        <li><a href="https://cartesianghost.bandcamp.com" target="_blank">Store</a></li>
+                        <li><a href="assets/CartesianGhost_EPK.pdf" target="_blank">E-Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://open.spotify.com/artist/2mP4hK2orFiRA9WruDxemQ" target="_blank"
+                            aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a href="https://music.apple.com/es/artist/cartesian-ghost/1694736548" target="_blank"
+                            aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                        <a href="http://www.instagram.com/cartesian_ghost" target="_blank" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="http://www.facebook.com/cartesianghost" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://cartesianghost.bandcamp.com" target="_blank" aria-label="Bandcamp"><i
+                                class="fab fa-bandcamp"></i></a>
+                        <a href="https://www.youtube.com/@cartesianghost" target="_blank" aria-label="YouTube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@cartesian_ghost" target="_blank" aria-label="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <div class="quote">
-            I think, therefore I haunt
+    <main>
+        <section id="hero" class="parallax">
+            <div class="overlay"></div>
+            <div class="hero-content">
+                <h1 class="visually-hidden">Cartesian Ghost</h1>
+                <img src="assets/images/logo_white_clean.png" alt="Cartesian Ghost Logo Large" class="hero-logo">
+                <p class="subtitle"><strong>Lux Arcana - Out Now</strong></p>
+                <a href="#music" class="btn btn-primary">Listen Now</a>
+            </div>
+        </section>
+
+        <section id="bio" class="section">
+            <div class="container bio-grid">
+                <div class="bio-text">
+                    <h2 class="section-title">The Band</h2>
+                    <p>Established in Mallorca (Spain) in 2015, Cartesian Ghost represents the crystallization of a
+                        relentless sonic pursuit. Refusing to be bound by static genres, the band has forged a unique
+                        identity they call Arcane Metal: a visceral blend of alternative rock/metal infused with
+                        progressive touches. Their sound is defined by hypnotic riffs, dizzying melodies, and an
+                        atmosphere that defies pigeonholing.</p>
+                    <p>After years of experimentation and lineup refinement, the band solidified their vision with the
+                        release of their debut album, Lux Arcana, in November 2023. Conceived in early 2023, the album
+                        was recorded, mixed, and mastered by Miquel Àngel Riutort (Mega) at Psychosomatic Studios,
+                        delivering 11 tracks that traverse a wide emotional and technical spectrum.</p>
+                    <p>The album's release triggered a period of rapid expansion, leading Cartesian Ghost to share the
+                        stage with international acts such as Harakiri for the Sky, Heretoir, and Toundra. Their
+                        powerful live performances have garnered significant milestones, including playing at the Full
+                        Metal Holiday festival in 2024 and reaching the semifinals of the Wacken Metal Battle Spain in
+                        2025.</p>
+                    <p>Cartesian Ghost’s story is one of resilience and renewal. Anchored by founding members Kristofer
+                        Montenegro (vocals), Pedro Abraham (keyboards), and Emilio García (drums), and featuring Eduardo
+                        Samper on guitar, the band entered a new era in late 2025. Following the departure of bassist
+                        Carlos Navas, Will Adrift joined the ranks in November 2025, completing the current lineup.
+                        Capitalizing on this renewed energy, the band is currently immersed in the creation of their
+                        second studio album, poised to further evolve and expand their sonic universe.</p>
+                </div>
+                <div class="bio-image">
+                    <img src="assets/images/band_photo_5.jpg" alt="Cartesian Ghost Band Members">
+                    <div class="members-container" style="margin-top: 20px;"><br />
+                        <p style="color: var(--accent-color); font-weight: 700; margin-bottom: 10px;">Cartesian Ghost
+                            is:</p>
+                        <ul class="band-members">
+                            <li><strong>Kristofer Montenegro</strong> - Vocals</li>
+                            <li><strong>Eduardo Samper</strong> - Guitar</li>
+                            <li><strong>Pedro Abraham</strong> - Keyboards</li>
+                            <li><strong>Will Adrift</strong> - Bass</li>
+                            <li><strong>Emilio García</strong> - Drums</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="music" class="section dark-bg">
+            <div class="container">
+                <h2 class="section-title">Music</h2>
+                <div class="album-showcase">
+                    <div class="album-art">
+                        <img src="assets/images/lux_arcana_cover.jpg" alt="Lux Arcana Album Cover">
+                    </div>
+                    <div class="album-details">
+                        <h3>Lux Arcana</h3>
+                        <p class="album-desc">Released on November 1, 2023, Lux Arcana stands as the definitive
+                            manifesto of Cartesian Ghost’s Arcane Metal. Self-released and meticulously crafted by
+                            Miquel Àngel Riutort (Mega) at Psychosomatic Studios, the eleven-track debut delivers a
+                            visceral blend of alternative darkness and progressive intricacy.</p>
+                        <p class="album-desc">The album has been enthusiastically received by the specialized press,
+                            hailed as a "portentous debut" by MariskalRock and a “small jewel” of the underground scene
+                            by Rock Hard. Balancing hypnotic riffs with deep emotional resonance, Lux Arcana solidifies
+                            the band’s status as a sophisticated and vital force in the modern metal landscape.</p>
+
+                        <div class="streaming-links">
+                            <a href="https://open.spotify.com/intl-es/album/2wDsyWi7BlYYeip5qc5fz1?si=Nf1LTsSLSou3c7RLgTg52g"
+                                target="_blank" class="streaming-icon spotify" aria-label="Listen on Spotify"><i
+                                    class="fab fa-spotify"></i></a>
+                            <a href="https://music.apple.com/es/album/lux-arcana/1710720206" target="_blank"
+                                class="streaming-icon apple" aria-label="Listen on Apple Music"><i
+                                    class="fab fa-apple"></i></a>
+                            <a href="https://music.youtube.com/playlist?list=OLAK5uy_mCPOO9Y_cz0Zbx-l00ZvJfW2_i3Qr47tk&si=vr3P7X_v7xh3BUFx"
+                                target="_blank" class="streaming-icon youtube" aria-label="Listen on YouTube Music"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+
+                        <div class="tracklist-container">
+                            <div class="tracklist-preview">
+                                <h4>Tracklist</h4>
+                                <ul>
+                                    <li>1. Feeding on my Bones (7:17)</li>
+                                    <li>2. Tyche (4:55)</li>
+                                    <li>3. The Kindling (3:51)</li>
+                                    <li>4. In a Manger (3:57)</li>
+                                    <li>5. The Fear of Blood (5:29)</li>
+                                    <li>6. Humid Robots (4:55)</li>
+                                    <li>7. Man the Machines (6:09)</li>
+                                    <li>8. Wisps of an Epiphany (5:11)</li>
+                                    <li>9. Nights in Stone (4:28)</li>
+                                    <li>10. Cold Furnace (6:15)</li>
+                                    <li>11. Drama (5:15)</li>
+                                </ul>
+                            </div>
+                            <div class="singles-list">
+                                <h4>Singles</h4>
+                                <ul>
+                                    <li>Feeding on My Bones</li>
+                                    <li>Nights in Stone</li>
+                                    <li>Cold Furnace</li>
+                                    <li>The Fear of Blood</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video" class="section">
+            <div class="container">
+                <h2 class="section-title">Videos</h2>
+                <div class="video-grid">
+                    <!-- Using placeholders as specific IDs were not provided in a structured way but URLs were in text -->
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BQeYFujrTu0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/uAIiXHdGiIs"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/XJuv7n7UG7Q"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section dark-bg">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="gallery-grid">
+                    <!-- Band Photos -->
+                    <div class="gallery-item"><img src="assets/images/band_photo_1.jpg" alt="Band Photo 1"></div>
+                    <div class="gallery-item"><img src="assets/images/band_photo_2.jpg" alt="Band Photo 2"></div>
+                    <div class="gallery-item"><img src="assets/images/band_photo_3.jpg" alt="Band Photo 3"></div>
+                    <div class="gallery-item"><img src="assets/images/band_photo_4.jpg" alt="Band Photo 4"></div>
+                    <div class="gallery-item"><img src="assets/images/band_photo_5.jpg" alt="Band Photo 5"></div>
+                    <!-- Live Photos -->
+                    <div class="gallery-item"><img src="assets/images/live_1.jpg" alt="Live Show 1"></div>
+                    <div class="gallery-item"><img src="assets/images/live_2.jpg" alt="Live Show 2"></div>
+                    <div class="gallery-item"><img src="assets/images/live_3.jpg" alt="Live Show 3"></div>
+                    <div class="gallery-item"><img src="assets/images/live_4.jpg" alt="Live Show 4"></div>
+                    <div class="gallery-item"><img src="assets/images/live_5.jpg" alt="Live Show 5"></div>
+                    <div class="gallery-item"><img src="assets/images/live_6.jpg" alt="Live Show 6"></div>
+                    <div class="gallery-item"><img src="assets/images/live_7.jpg" alt="Live Show 7"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shows" class="section">
+            <div class="container">
+                <h2 class="section-title">Shows</h2>
+                <div class="bandsintown-container">
+                    <a class="bit-widget-initializer" data-artist-name="Cartesian Ghost" data-display-limit="5"
+                        data-link-color="#007bff" data-text-color="#ffffff" data-bg-color="rgba(0,0,0,0.5)"
+                        data-separator-color="#6c757d" data-font="Montserrat" data-auto-style="true"
+                        data-layout-type="vertical" data-widget-width="100%" data-app-id="YOUR_APP_ID"></a>
+                    <script src="https://widget.bandsintown.com/main.min.js"></script>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="contact" class="section dark-bg">
+            <div class="container contact-container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Booking & Management</p>
+                        <a href="mailto:contact@cartesianghost.com">contact@cartesianghost.com</a>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://open.spotify.com/artist/2mP4hK2orFiRA9WruDxemQ" target="_blank"
+                        aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    <a href="https://music.apple.com/es/artist/cartesian-ghost/1694736548" target="_blank"
+                        aria-label="Apple Music"><i class="fab fa-apple"></i></a>
+                    <a href="http://www.instagram.com/cartesian_ghost" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="http://www.facebook.com/cartesianghost" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://cartesianghost.bandcamp.com" target="_blank" aria-label="Bandcamp"><i
+                            class="fab fa-bandcamp"></i></a>
+                    <a href="https://www.youtube.com/@cartesianghost" target="_blank" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@cartesian_ghost" target="_blank" aria-label="TikTok"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Cartesian Ghost. All rights reserved.</p>
         </div>
+    </footer>
 
-        <div class="symbols">
-            <span class="symbol">◊</span>
-            <span class="symbol">✧</span>
-            <span class="symbol">◊</span>
-        </div>
-
-        <div class="divider"></div>
-
-        <footer>
-            MMXXVI
-        </footer>
-    </div>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
