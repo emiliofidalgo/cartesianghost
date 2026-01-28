@@ -628,6 +628,10 @@ footer {
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -738,10 +742,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .bio-image {
-        order: -1;
-        /* Image first on mobile? or text first. Let's keep typical flow */
-    }
+
 
     .tracklist-container,
     .album-desc,
