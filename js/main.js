@@ -62,10 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const headerHeight = document.querySelector('header').offsetHeight;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-
+                
+                // Check if mobile
+                const isMobile = window.innerWidth <= 768;
+                
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth'
+                    behavior: isMobile ? 'auto' : 'smooth'
                 });
             }
         });

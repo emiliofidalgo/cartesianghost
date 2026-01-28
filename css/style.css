@@ -14,6 +14,17 @@
     --transition-speed: 0.3s;
 }
 
+/* Mobile-only utility */
+/* Mobile-only utility */
+.mobile-only {
+    display: none;
+}
+
+/* Mobile Header Socials - Hidden on Desktop */
+.mobile-header-socials {
+    display: none;
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -629,6 +640,8 @@ footer {
     .hamburger {
         display: block;
         z-index: 1001;
+        /* Ensure above nav overlay */
+        position: relative;
     }
 
     .nav-links {
@@ -641,8 +654,28 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: right 0.4s ease;
         z-index: 1000;
+        padding-top: 60px;
+        /* Space for close button if needed, but we use hamburger toggle */
+    }
+
+    /* Center Mobile Socials in Header */
+    .mobile-header-socials {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 15px;
+    }
+
+    .mobile-header-socials a {
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Socials (Removed from nav in refined plan, removing old class style if redundant, but keeping generic if reused) */
+    .mobile-socials {
+        display: none;
     }
 
     .nav-links.active {
@@ -650,7 +683,40 @@ footer {
     }
 
     .nav-links li {
-        margin: 20px 0;
+        margin: 15px 0;
+        /* Reduced margin */
+        opacity: 0;
+        animation: navLinkFade 0.5s ease forwards 0.3s;
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Hamburger Animation to X */
+    .hamburger.toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Disable smooth scroll on mobile for interactions */
+    html {
+        scroll-behavior: auto;
     }
 
     .nav-links a {
@@ -677,8 +743,14 @@ footer {
         /* Image first on mobile? or text first. Let's keep typical flow */
     }
 
-    .tracklist-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .tracklist-container,
+    .album-desc,
+    .singles-list {
+        display: none;
+    }
+
+    .album-art {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
