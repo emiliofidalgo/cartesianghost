@@ -823,4 +823,34 @@ footer {
     .singles-list {
         display: none;
     }
+
+    .footer-rights {
+        display: none;
+    }
+}
+
+/* Small Mobile Override to Stack Music */
+@media screen and (max-width: 450px) {
+    .album-showcase {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .album-art,
+    .album-details h3,
+    .streaming-links,
+    .album-desc-container {
+        grid-column: 1 / -1;
+    }
+
+    .album-details h3 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .streaming-links {
+        justify-content: center;
+        margin-top: 20px;
+        align-self: center;
+    }
 }
