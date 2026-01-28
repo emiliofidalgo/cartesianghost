@@ -834,23 +834,37 @@ footer {
     .album-showcase {
         grid-template-columns: 1fr;
         justify-items: center;
+        gap: 15px;
     }
 
-    .album-art,
-    .album-details h3,
-    .streaming-links,
-    .album-desc-container {
+    .album-art {
         grid-column: 1 / -1;
+        grid-row: 1;
     }
 
     .album-details h3 {
+        grid-column: 1 / -1;
+        grid-row: 2;
         text-align: center;
         margin-top: 10px;
+        font-size: 2rem;
     }
 
     .streaming-links {
+        grid-column: 1 / -1;
+        grid-row: 3;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 10px;
         align-self: center;
+    }
+
+    .streaming-icon {
+        font-size: 3rem;
+    }
+
+    .album-desc-container {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        margin-top: 20px;
     }
 }
