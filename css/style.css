@@ -514,11 +514,11 @@ header.scrolled {
 
 /* Shows Section */
 .bandsintown-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: var(--secondary-bg);
     padding: 40px;
-    text-align: center;
+    text-align: left;
     border-radius: 5px;
     border: 1px solid #333;
 }
